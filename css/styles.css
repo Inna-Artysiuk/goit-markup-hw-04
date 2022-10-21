@@ -63,7 +63,7 @@ buton {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 .section {
   padding-top: 94px;
@@ -96,10 +96,8 @@ buton {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header-address {
-  margin-left: auto;
-}
-.site-contact {
+
+.site-nav {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -128,6 +126,20 @@ buton {
 .site-nav .nav-link.current {
   color: var(--accent-color);
 }
+.header-address {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.site-contact {
+  display: flex;
+  gap: 30px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
 .nav-mail {
   font-weight: 500;
   font-size: 14px;
@@ -135,16 +147,14 @@ buton {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-.nav-mail::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 12px;
+.nav-mail {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+.nav-mail-icon {
+  fill: currentColor;
   margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 .nav-tel {
   font-weight: 500;
@@ -153,16 +163,14 @@ buton {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-.nav-tel::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 16px;
+.nav-tel {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+.nav-tel-icon {
+  fill: currentColor;
   margin-right: 10px;
-  background-image: url(../images/Vector.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 .nav-tel:hover,
 .nav-tel:focus,
@@ -366,18 +374,18 @@ buton {
 .specialist-soc-link:focus .specialist-soc-icon {
   fill: #ffffff;
 }
-
+/* Постійні клієнти */
 .client-list {
   display: flex;
   gap: 30px;
 }
 
 .client-item {
-  width: calc((100%-150px) / 6);
+  width: calc((100%-var(--card-set-gap) * 5) / 6);
   height: 92px;
 }
 .client-link {
-  width: 100%;
+  width: 170px;
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -385,7 +393,7 @@ buton {
   align-items: center;
   justify-content: center;
 }
-client-icon {
+.client-icon {
   fill: #afb1b8;
 }
 .client-link:hover,
@@ -406,6 +414,7 @@ client-icon {
   color: var(--headin-color);
 }
 .address {
+  display: flex;
   margin-top: 20px;
 }
 .footer-address {
@@ -439,7 +448,15 @@ client-icon {
 .footer-address:focus {
   color: var(--accent-color);
 }
-.social {
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.footer-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -449,6 +466,7 @@ client-icon {
   margin-bottom: 20px;
 }
 .footer-soc {
+  margin-left: 70px;
 }
 .footer-soc-list {
   display: flex;
