@@ -456,9 +456,7 @@ buton {
 .footer-container {
   display: flex;
   align-items: baseline;
-  margin: 0 auto;
-  max-width: 1600px;
-}
+ }
 
 .footer-title {
   font-weight: 700;
